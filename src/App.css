@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+}
+
+/* Track */
+
+
+
+
+.connect-wallet {
+  background-image: url('../public/assets/connect.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00011B;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+table,
+th,
+td,
+::placeholder,
+label,
+select {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.tab {
+  /* flex: 1; */
+  text-align: center;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  padding: 15px;
+}
+
+.tab:hover {
+  background-color: #0682C7;
+  border-radius: 50%;
+  width: 60px;
+
+}
+.active-tab {
+  background-color: #0682C7;
+  border-radius: 50%;
+  width: 60px;
+}
+.tab-content {
+  padding: 20px;
+}
+
+.data-table table {
+
+  border-top: 1px solid #C026D3
+}
+
+.data-table th,
+.data-table td {
+  font-weight: 300;
+
+  text-align: center;
+  border-right: 1px solid #C026D3
+}
+
+.data-table tr {
+  border-bottom: 1px solid #C026D3 !important
+}
+
+
+.connect-img {
+  -webkit-animation: mover 2s infinite alternate;
+  animation: mover 2s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+input:focus-visible {
+  outline: none;
+  /* Removes the default outline or border */
+
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li::before,
+.tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li div {
+  padding: 5px;
+  height: 35px;
+  background: #fff;
+
+  display: inline-grid;
+  place-items: center;
+  width: 150px;
+  text-decoration: none;
+
+  color: #000;
+  font-family: arial, verdana, tahoma;
+  font-size: 15px;
+  font-weight: bold;
+
+  /* border-radius: 5px; */
+  /* -webkit-border-radius: 5px; */
+  -moz-border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/* .tree li div {
+  border: 3px solid #C026D3;
+  padding: 5px;
+  height: 35px;
+  background: #fff;
+  display: inline-grid;
+  place-items: center;
+  width: 35px;
+ 
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000;
+  font-family: arial, verdana, tahoma;
+  font-size: 15px;
+  font-weight: bold;
+
+ 
+  -moz-border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+} */
+
+.tree li div:hover,
+.tree li div:hover+ul li div {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+
+.tree li div:hover+ul li::after,
+.tree li div:hover+ul li::before,
+.tree li div:hover+ul::before,
+.tree li div:hover+ul ul::before {
+  border-color: #94a0b4;
+}
+
+
+.register input,
+.register select {
+  background-color: rgba(255, 255, 255, 0.2);
+}
